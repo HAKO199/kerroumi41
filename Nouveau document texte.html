@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>👑 DZ الـبـطحـــــة👑</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+    }
+    
+    body {
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      background-color: #34495e;
+      color: white;
+      padding: 1rem;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+    }
+    
+    .stat-box {
+      text-align: center;
+    }
+    
+    .stat-number {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    
+    .stat-label {
+      font-size: 0.9rem;
+    }
+    
+    .content {
+      display: flex;
+      gap: 1rem;
+    }
+    
+    .posts-section {
+      flex: 2;
+    }
+    
+    .videos-section {
+      flex: 1;
+    }
+    
+    .section-title {
+      background-color: #3498db;
+      color: white;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+    }
+    
+    .post {
+      background-color: white;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .post-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+    
+    .post-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #ddd;
+      margin-left: 0.5rem;
+    }
+    
+    .post-user {
+      font-weight: bold;
+    }
+    
+    .post-time {
+      color: #7f8c8d;
+      font-size: 0.8rem;
+    }
+    
+    .post-content {
+      margin-bottom: 0.5rem;
+    }
+    
+    .post-image {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-bottom: 0.5rem;
+    }
+    
+    .post-stats {
+      display: flex;
+      justify-content: space-between;
+      color: #7f8c8d;
+      font-size: 0.9rem;
+      border-top: 1px solid #eee;
+      padding-top: 0.5rem;
+    }
+    
+    .video-card {
+      background-color: white;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .video-thumbnail {
+      width: 100%;
+      height: 150px;
+      background-color: #ddd;
+      border-radius: 5px;
+      margin-bottom: 0.5rem;
+      position: relative;
+    }
+    
+    .play-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 2rem;
+      background-color: rgba(0,0,0,0.5);
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .video-title {
+      font-weight: bold;
+      margin-bottom: 0.3rem;
+    }
+    
+    .video-stats {
+      color: #7f8c8d;
+      font-size: 0.8rem;
+    }
+    
+    .pagination {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    
+    .pagination button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      margin: 0 0.2rem;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    
+    .pagination button:hover {
+      background-color: #2980b9;
+    }
+    
+    .pagination button.active {
+      background-color: #2c3e50;
+    }
+    
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>👑 DZ الـبـطحـــــة👑</h1>
+    <p>شارك منشوراتك وشاهد أحدث مقاطع الفيديو</p>
+  </header>
+  
+  <div class="container">
+    <div class="stats">
+      <div class="stat-box">
+        <div class="stat-number">1,245</div>
+        <div class="stat-label">منشور</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">568</div>
+        <div class="stat-label">مقطع فيديو</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">8,932</div>
+        <div class="stat-label">لاعب</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">24</div>
+        <div class="stat-label">لعبة</div>
+      </div>
+    </div>
+    
+    <div class="content">
+      <div class="posts-section">
+        <div class="section-title">أحدث المنشورات</div>
+        
+        <div class="post">
+          <div class="post-header">
+            <div class="post-avatar"></div>
+            <div>
+              <div class="post-user">أحمد محمد</div>
+              <div class="post-time">منذ ساعتين</div>
+            </div>
+          </div>
+          <div class="post-content">
+            <p>شاركت للتو أعلى نتيجة لي في لعبة Fortnite! هل يمكنك التغلب عليها؟ 🔥</p>
+          </div>
+          <img src="https://via.placeholder.com/600x300" alt="صورة النتيجة" class="post-image">
+          <div class="post-stats">
+            <span>👍 124 إعجاب</span>
+            <span>💬 45 تعليق</span>
+            <span>↗️ 12 مشاركة</span>
+          </div>
+        </div>
+        
+        <div class="post">
+          <div class="post-header">
+            <div class="post-avatar"></div>
+            <div>
+              <div class="post-user">سارة خالد</div>
+              <div class="post-time">منذ 5 ساعات</div>
+            </div>
+          </div>
+          <div class="post-content">
+            <p>هل جربتم اللعبة الجديدة CyberQuest؟ رأيي أنها من أفضل ألعاب RPG لهذا العام! من جربها؟</p>
+          </div>
+          <div class="post-stats">
+            <span>👍 89 إعجاب</span>
+            <span>💬 32 تعليق</span>
+            <span>↗️ 5 مشاركة</span>
+          </div>
+        </div>
+        
+        <div class="post">
+          <div class="post-header">
+            <div class="post-avatar"></div>
+            <div>
+              <div class="post-user">علي حسن</div>
+              <div class="post-time">منذ يوم</div>
+            </div>
+          </div>
+          <div class="post-content">
+            <p>فيديو جديد لي عن كيفية حل المرحلة الصعبة في Resident Evil Village. شاهدوه وأخبروني برأيكم!</p>
+          </div>
+          <img src="https://via.placeholder.com/600x300" alt="صورة الفيديو" class="post-image">
+          <div class="post-stats">
+            <span>👍 210 إعجاب</span>
+            <span>💬 76 تعليق</span>
+            <span>↗️ 34 مشاركة</span>
+          </div>
+        </div>
+        
+        <div class="pagination">
+          <button>السابق</button>
+          <button class="active">1</button>
+          <button>2</button>
+          <button>3</button>
+          <button>4</button>
+          <button>5</button>
+          <button>التالي</button>
+        </div>
+      </div>
+      
+      <div class="videos-section">
+        <div class="section-title">أحدث الفيديوهات</div>
+        
+        <div class="video-card">
+          <div class="video-thumbnail">
+            <div class="play-icon">▶</div>
+          </div>
+          <div class="video-title">أفضل 10 لحظات في لعبة Call of Duty هذا الشهر</div>
+          <div class="video-stats">
+            <span>قناة الألعاب • 12K مشاهدة • منذ يومين</span>
+          </div>
+        </div>
+        
+        <div class="video-card">
+          <div class="video-thumbnail">
+            <div class="play-icon">▶</div>
+          </div>
+          <div class="video-title">مراجعة كاملة لـ FIFA 23 - الإيجابيات والسلبيات</div>
+          <div class="video-stats">
+            <span>مراجعات الألعاب • 8.5K مشاهدة • منذ 4 أيام</span>
+          </div>
+        </div>
+        
+        <div class="video-card">
+          <div class="video-thumbnail">
+            <div class="play-icon">▶</div>
+          </div>
+          <div class="video-title">كيفية بناء منزل أحلامك في The Sims 4 - دليل المبتدئين</div>
+          <div class="video-stats">
+            <span>سيمرز العرب • 5.2K مشاهدة • منذ أسبوع</span>
+          </div>
+        </div>
+        
+        <div class="video-card">
+          <div class="video-thumbnail">
+            <div class="play-icon">▶</div>
+          </div>
+          <div class="video-title">أسرار وخدع في GTA V لم تكن تعرفها!</div>
+          <div class="video-stats">
+            <span>أسرار الألعاب • 15.7K مشاهدة • منذ أسبوعين</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html></div>
